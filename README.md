@@ -1,4 +1,4 @@
-# Random Image Color Generator & Config Modifier
+# IriShift | Random Image Color Generator & Config Modifier
 
 This Python project generates a color palette from a randomly selected image, extracts the most prominent colors, and uses them to update the configuration files for your system's appearance. Specifically, it modifies the background and foreground colors for the **Qtile** window manager and **Alacritty** terminal emulator.
 
