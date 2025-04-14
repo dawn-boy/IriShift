@@ -54,7 +54,7 @@ This Python project generates a color palette from a randomly selected image, ex
    - Set the chosen image as the wallpaper.
 
 ```bash
-python random_image_color_gen.py
+python irisShift.py
 ```
 
 ## Customization
