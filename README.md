@@ -31,3 +31,36 @@ This Python project generates a color palette from a randomly selected image, ex
 2. Ensure you have the required dependencies installed:
    ```bash
    pip install colorthief
+   ```
+3. Ensure you have Qtile and Alacritty configured on your system.
+
+## How It Works
+
+1. The script selects a random image from the specified directory.
+2. It generates a color palette from the image using the `ColorThief` library.
+3. The script calculates the intensity of the colors and chooses a background color based on brightness.
+4. It updates the configuration files for **Qtile** and **Alacritty** to use the new color scheme:
+   - `bgColors` and `fgColors` for **Qtile** are updated.
+   - The `background` color in **Alacritty** is updated.
+5. The script sets the chosen image as the wallpaper using the `nitrogen` tool.
+6. A backup of the original configuration files is created (with the `.bak` extension).
+
+## Usage
+
+1. Run the script, and it will automatically:
+   - Pick a random image.
+   - Generate the color palette.
+   - Update configuration files for **Qtile** and **Alacritty**.
+   - Set the chosen image as the wallpaper.
+
+```bash
+python random_image_color_gen.py
+```
+
+## Customization
+- Image Directory: Modify the path variable in the script to point to your desired image directory.
+- Number of Colors: The script generates 15 colors by default, but you can change this in the colorGen() function.
+- Color Processing: Modify the functions like colorIntensity() and backgroundDarker() if you'd like to change how colors are processed.
+
+## Backup and Rollback
+- Before modifying the configuration files, backups are created with the .bak extension. If something goes wrong, you can manually restore the original files from the backups.
