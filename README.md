@@ -1,9 +1,33 @@
-# Prerequisite
-- This tool expects a few things to start with:
-    - A Collection of walls at ~/Pictures/.walls, named {0-n}.jpg,
-    - Qtile setup (refer mine in the dotfiles rep),
-    - A Daring Alacritty setup (refer please)
-  ### Modules
-    -  colorthief
-# How to use
-- Simple really, just run it and see the Magic!
+# Random Image Color Generator & Config Modifier
+
+This Python project generates a color palette from a randomly selected image, extracts the most prominent colors, and uses them to update the configuration files for your system's appearance. Specifically, it modifies the background and foreground colors for the **Qtile** window manager and **Alacritty** terminal emulator.
+
+## Features
+
+- **Random Image Selection:** Selects a random image from a directory.
+- **Color Palette Generation:** Uses the `colorthief` library to generate a color palette from the chosen image.
+- **Color Intensity Calculation:** Determines the intensity of the colors for better contrast.
+- **Background Darkening:** Darkens the first color to be used as the background color.
+- **Configuration File Updates:** Updates `config.py` for **Qtile** and `alacritty.yml` for **Alacritty** to reflect the new colors.
+- **Image Set as Wallpaper:** Automatically sets the chosen image as the system wallpaper using `nitrogen`.
+
+## Requirements
+
+- Python 3.x
+- `colorthief` library (`pip install colorthief`)
+- `nitrogen` (for setting the wallpaper)
+- A system using **Qtile** as the window manager and **Alacritty** as the terminal emulator
+
+## File Structure
+
+- **Main Script:** The Python script that performs all the operations.
+- **/home/Dew/.github/walls/.walls/**: Directory containing images for wallpaper.
+- **/home/Dew/.config/qtile/config.py**: Configuration file for Qtile, updated with the new color scheme.
+- **/home/Dew/.config/alacritty/alacritty.yml**: Configuration file for Alacritty, updated with the new background color.
+
+## Installation
+
+1. Clone this repository to your local machine.
+2. Ensure you have the required dependencies installed:
+   ```bash
+   pip install colorthief
