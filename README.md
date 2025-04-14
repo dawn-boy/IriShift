@@ -6,8 +6,6 @@ This Python project generates a color palette from a randomly selected image, ex
 
 - **Random Image Selection:** Selects a random image from a directory.
 - **Color Palette Generation:** Uses the `colorthief` library to generate a color palette from the chosen image.
-- **Color Intensity Calculation:** Determines the intensity of the colors for better contrast.
-- **Background Darkening:** Darkens the first color to be used as the background color.
 - **Configuration File Updates:** Updates `config.py` for **Qtile** and `alacritty.yml` for **Alacritty** to reflect the new colors.
 - **Image Set as Wallpaper:** Automatically sets the chosen image as the system wallpaper using `nitrogen`.
 
