@@ -1,13 +1,12 @@
 # IriShift - Random Image Color Generator & Config Modifier
 
-This Python project generates a color palette from a randomly selected image, extracts the most prominent colors, and uses them to update the configuration files for your system's appearance. Specifically, it modifies the background and foreground colors for the **Qtile** window manager and **Alacritty** terminal emulator.
+This script looks for dominant colors from a randomly selected image and uses that to theme your *Qtile* and *Alacritty* setup.
 
 ## Features
 
-- **Random Image Selection:** Selects a random image from a directory.
-- **Color Palette Generation:** Uses the `colorthief` library to generate a color palette from the chosen image.
-- **Configuration File Updates:** Updates `config.py` for **Qtile** and `alacritty.yml` for **Alacritty** to reflect the new colors.
-- **Image Set as Wallpaper:** Automatically sets the chosen image as the system wallpaper using `nitrogen`.
+- Theme color generation from a randomly selected wall in a given directory
+- Auto-updates the config files: The `config.py` for Qtile and `alacritty.yml` for Alacritty.
+- The randomly selected image is also updated as the wallpaper using `nitrogen`
 
 ## Requirements
 
@@ -26,7 +25,7 @@ This Python project generates a color palette from a randomly selected image, ex
 ## Installation
 
 1. Clone this repository to your local machine.
-2. Ensure you have the required dependencies installed:
+2. Ensure you have `colortheif` installed:
    ```bash
    pip install colorthief
    ```
@@ -55,10 +54,5 @@ This Python project generates a color palette from a randomly selected image, ex
 python irisShift.py
 ```
 
-## Customization
-- Image Directory: Modify the path variable in the script to point to your desired image directory.
-- Number of Colors: The script generates 15 colors by default, but you can change this in the colorGen() function.
-- Color Processing: Modify the functions like colorIntensity() and backgroundDarker() if you'd like to change how colors are processed.
-
-## Backup and Rollback
-- Before modifying the configuration files, backups are created with the .bak extension. If something goes wrong, you can manually restore the original files from the backups.
+## Backup and Rollbacks
+Before modifying the configuration files, backups are created with the .bak extension. If something goes wrong, you can manually restore the original files from the backups.
